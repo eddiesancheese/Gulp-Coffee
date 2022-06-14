@@ -12,7 +12,7 @@ body {
     font-size: 2rem;
     margin-bottom: 0;
   }
-  /* make images flexible */
+ 
   img {
     max-width: 100%;
   }
@@ -25,24 +25,26 @@ body {
   header {
     border-bottom: 10px solid #d98555;
   }
-  /* navbar styling */
+  
   nav ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    border:#59331d 5px;
   }
   nav li {
     margin: 0 1rem 1rem 1rem;
     font-size: 1.3rem;
   }
-  /* max width on the image in pixels */
   nav .logo img {
     max-width: 150px;
   }
-  /* flex basis on the image container, li */
+  
   nav .logo {
     flex-basis: 100%;
     text-align: center;
@@ -67,10 +69,13 @@ body {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
   }
+  
   article {
     flex-basis: 73%;
+    padding: 2rem;
   }
   figure {
     margin: 3rem 0 0 0;
@@ -115,3 +120,31 @@ body {
     display: block;
     margin: 0 1rem 3rem 1rem;
   }
+
+  @media (min-width: 768px)
+  {nav ul{flex-direction: row;
+  align-items: none;}
+ .main {flex-direction:row;}}
+  
+
+  @media (min-width: 1024px){
+    
+    nav ul {flex-flow: nowrap;
+    align-items: flex-end;
+  justify-content: center;}
+    
+    nav .logo {
+      text-align:start;
+      padding: 1rem;
+      
+  }
+  nav a { flex-flow: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+  nav span {padding: 0.5rem}
+ 
+  }
+  
